@@ -74,10 +74,10 @@ const Navbar = () => {
                     handleLinkClick(link.id)} className="transition-colors
                      duration-500 hover:text-orange-500">
                         {link.name}
-                     </a>
+                </a>
               ))}
         </div>
-    )}   
+       )}   
     </>
   )
 }
