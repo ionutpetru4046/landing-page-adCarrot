@@ -11,6 +11,9 @@ const About = () => {
             rounded-3xl shadow-lg" />
         ))}
       </div>
+      <p className="mb-8 max-w-4xl text-center text-xl lg:text-4xl">
+        {ABOUT.aboutUsText}
+      </p>
     </section>
   )
 }
