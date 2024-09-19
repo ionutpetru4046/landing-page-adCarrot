@@ -1,5 +1,6 @@
 import profileImg1 from "../assets/profile1.jpeg";
 import profileImg2 from "../assets/profile2.jpeg";
+import profileImg3 from "../assets/profile3.jpg";
 
 const Hero = () => {
   return (
@@ -10,8 +11,15 @@ const Hero = () => {
                 <div className="mb-4 flex space-x-2">
                    <img src={profileImg1} alt="Team Member 1" className="h-12 w-12 rounded-full 
                    border-2 border-orange-50" />
-                   <img src={profileImg2} alt="Team Member 2" />
+                   <img src={profileImg2} alt="Team Member 2" className="h-12 w-12 rounded-full 
+                   border-2 border-orange-50" />
+                   <img src={profileImg3} alt="Team Member 3" className="h-12 w-12 rounded-full 
+                   border-2 border-orange-50" />
                 </div>
+                <h1 className="text-4xl tracking-tighter md:text-x-5xl lg:text-7xl">
+                    We create impactful ads that
+                    <span className="text-orange-500"> elevate</span> your brand.
+                </h1>
             </div>
         </section>
     </div>
