@@ -21,6 +21,20 @@ const Services = () => {
                     </button>
                 ))}
             </div>
+            <div key={activeTab.id} className="mt-8 flex flex-col items-center 
+            lg:flex-row ">
+                <div className="p-4 lg:w-1/2">
+                    <h2 className="mb-4 text-3xl lg:text-4xl">{activeTab.
+                    content}</h2>
+                    <p className="text-lg tracking-tighter text-emerald-950 
+                    lg:text-2xl">{activeTab.description}
+                    </p>
+                </div>
+                <div className="p-4 lg:w-1/2">
+                    <img src={activeTab.imgSrc} alt={activeTab.title} 
+                    className="h-auto w-full rounded-lg" />
+                </div>
+            </div>
         </div>
     </section>
   )
