@@ -64,7 +64,7 @@ const Navbar = () => {
     </nav>
     {isOpen && (
         <div className="fixed inset-0 z-20 flex flex-col space-y-8 bg-emerald-950 px-20 pt-20 
-        text-4xl font-bold uppercase text-emerald-100 lg:6xl">
+        text-3xl font-bold uppercase text-emerald-100 lg:4xl">
             <button onClick={() => setIsOpen(false)} type="button"
               className="absolute right-4 top-4 rounded-full bg-emerald-900 p-2 text-orange-50 lg:right-20">
                 <FaTimes className="h-8 w-8" />
