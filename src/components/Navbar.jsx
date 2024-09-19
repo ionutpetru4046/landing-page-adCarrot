@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react"
-import logo from "../assets/logo.png"
+import { useState, useEffect } from "react"
+import { FaBars, FaTimes } from "react-icons/fa";
+import logo from "../assets/logo.png";
+import {LINKS} from "../constants";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,17 +19,17 @@ const Navbar = () => {
         if (isOpen) {
           e.preventDefault();
         }
-      }
-      window.addEventListener("scroll", handleScroll)
+      };
+      window.addEventListener("scroll", handleScroll);
         return () => {
-          window.removeEventListener("scroll", handleScroll)
-        }
+          window.removeEventListener("scroll", handleScroll);
+        };
     }, [isOpen])
 
     const handleLinkClick = (e, id) => {
       e.preventDefault();
-      setIsOpen(false)
-      const offset = -70
+      setIsOpen(false);
+      const offset = -70;
       const element = document.getElementById(id);
       const elementPosition = element.getBoundingClientRect().top + window.
       scrollY;
@@ -50,9 +52,32 @@ const Navbar = () => {
                         <img src={logo} alt="AdCarrot" width={120} height={20} />
                     </a>
                 </div>
+                <div className="">
+                    <button onClick={() => setIsOpen(!isOpen)} 
+                     type="button" className="inline-flex items-center 
+                     justify-center bg-emerald-950 p-2 text-orange-50">
+                        <FaBars className="h-6 w-6" />    
+                    </button>
+                </div>
             </div>
         </div>
-    </nav>   
+    </nav>
+    {isOpen && (
+        <div className="fixed inset-0 z-20 flex flex-col-y-8 bg-emerald-950 px-20 pt-20 
+        text-5xl font-bold uppercase text-emerald-100 lg:6xl">
+            <button onClick={() => setIsOpen(false)} type="button"
+              className="absolute right-4 top-4 rounded-full bg-emerald-900 p-2 text-orange-50 lg:right-20">
+                <FaTimes className="h-8 w-8" />
+              </button>
+              {LINKS.map((link, index) => (
+                <a key={index} href={'#${link.id}'} onClick={() => 
+                    handleLinkClick(link.id)} className="transition-colors
+                     duration-500 hover:text-orange-500">
+                        {link.name}
+                     </a>
+              ))}
+        </div>
+    )}   
     </>
   )
 }
