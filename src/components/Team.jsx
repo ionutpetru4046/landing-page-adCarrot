@@ -8,7 +8,8 @@ const Team = () => {
             {TEAM_MEMBERS.map((member, index) => (
                 <div key={index} className="mb-12 flex w-full flex-col 
                 items-center px-4 text-center md:w-1/2 lg:w-1/3">
-                    <img src={member.image} alt="" />
+                    <img src={member.image} alt={member.name} className="mb-4 
+                    h-48 w-48 rounded-full" />
                 </div>
             ))}
         </div>
