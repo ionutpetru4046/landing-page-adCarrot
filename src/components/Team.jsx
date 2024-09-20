@@ -10,6 +10,10 @@ const Team = () => {
                 items-center px-4 text-center md:w-1/2 lg:w-1/3">
                     <img src={member.image} alt={member.name} className="mb-4 
                     h-48 w-48 rounded-full" />
+                    <h3 className="font-semibold tracking-tighter lg:text-xl">
+                        {member.name}
+                    </h3>
+                    <p className="italic lg:text-lg">{member.title}</p>
                 </div>
             ))}
         </div>
