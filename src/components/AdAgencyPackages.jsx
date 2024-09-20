@@ -22,7 +22,7 @@ const AdAgencyPackages = () => {
                             <p className="px-2">{pkg.description}</p>
                         </div>
                         <div className="flex flex-col md:w-1/2">
-                            <h3 className="mb-2 font-semibold tracking-tighter">What's included?</h3>
+                            <h3 className="mb-2 font-semibold tracking-tighter">What is included?</h3>
                             <ul className="mb-4">
                                 {pkg.services.map((service, index) => (
                                     <li key={index}>- {service}</li>
