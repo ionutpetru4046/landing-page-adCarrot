@@ -77,7 +77,7 @@ export const SERVICES = [
 
 export const PROJECTS = [
   {
-    year: "2023",
+    year: "2022",
     title: "Olliviere",
     description: "How we furthered AI in tech.",
     details:
@@ -103,7 +103,7 @@ export const PROJECTS = [
     },
   },
   {
-    year: "2023",
+    year: "2024",
     title: "Arper",
     description: "How we generated interest in type.",
     details:
