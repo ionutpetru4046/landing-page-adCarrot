@@ -21,7 +21,7 @@ const Footer = () => {
                 </a>
             </div>
             <div className="text-sm opacity-50">
-                {new Date().getFullYear()} AdCarrot. All Rights Reserved
+             © {new Date().getFullYear()} AdCarrot. All Rights Reserved
             </div>
         </div>
     </footer>
