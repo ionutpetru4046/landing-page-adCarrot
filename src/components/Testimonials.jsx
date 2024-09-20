@@ -12,6 +12,10 @@ const Testimonials = () => {
                     <img src={testimonial.image} alt={testimonial.author} 
                     className="mb-4 rounded-3xl object-cover" />
                     <p className="mb-4 text-lg md:text-xl lg:text-2xl">{testimonial.text}</p>
+                    <div className="mt-6">
+                        <p className="font-bold">{testimonial.author}</p>
+                        <p className="text-sm">{testimonial.title}</p>
+                    </div>
                 </div>
             ))}
         </div>
