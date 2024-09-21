@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react"
+/* eslint-disable no-undef */
+import { useEffect, useState } from "react"
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import {LINKS} from "../constants";
@@ -32,8 +33,7 @@ const Navbar = () => {
       setIsOpen(false);
       const offset = -70;
       const element = document.getElementById(id);
-      const elementPosition = element.getBoundingClientRect().top + window.
-      scrollY;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition + offset;
 
       window.scrollTo({
@@ -88,9 +88,9 @@ const Navbar = () => {
                 animate= "visible"
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 key={index} 
-                href={'#${link.id}'} 
+                href={`#${link.id}`} 
                 onClick={() => 
-                    handleLinkClick(link.id)} 
+                    handleLinkClick(e, link.id)} 
                     className="transition-colors
                      duration-500 hover:text-orange-500">
                         {link.name}
