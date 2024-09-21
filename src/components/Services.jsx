@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { SERVICES } from "../constants"
+import { motion } from "framer-motion";
 
 const Services = () => {
 
@@ -21,7 +22,13 @@ const Services = () => {
                     </button>
                 ))}
             </div>
-            <div key={activeTab.id} className="mt-8 flex flex-col items-center 
+            <motion.div 
+            initial={{ opacity: 0, y: 0.8 }}
+            animate={{ opacity: 1, y: 1 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+            key={activeTab.id} 
+            className="mt-8 flex flex-col items-center 
             lg:flex-row ">
                 <div className="p-4 lg:w-1/2">
                     <h2 className="mb-4 text-3xl lg:text-4xl">{activeTab.
@@ -34,7 +41,7 @@ const Services = () => {
                     <img src={activeTab.imgSrc} alt={activeTab.title} 
                     className="h-auto w-full rounded-lg" />
                 </div>
-            </div>
+            </motion.div>
         </div>
     </section>
   )
